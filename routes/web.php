@@ -2,14 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function (\Illuminate\Http\Request $request) {
-    $query = \App\Models\Tour::query();
-
-    if ($request->has('category') && $request->category !== 'all') {
-        $query->where('category', $request->category);
-    }
-
-    $tours = $query->paginate(8)->appends($request->query());
+Route::get('/', function () {
+    $tours = \App\Models\Tour::take(4)->get();
     return view('welcome', compact('tours'));
 });
 
@@ -17,8 +11,15 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/tours', function () {
-    return view('tours');
+Route::get('/tours', function (\Illuminate\Http\Request $request) {
+    $query = \App\Models\Tour::query();
+
+    if ($request->has('category') && $request->category !== 'all') {
+        $query->where('category', $request->category);
+    }
+
+    $tours = $query->paginate(12)->appends($request->query());
+    return view('tours', compact('tours'));
 });
 
 Route::get('/tours/{id}', function ($id) {
