@@ -17,7 +17,10 @@
     <!-- Navbar -->
     <nav class="navbar" id="mainNavbar">
         <div class="nav-brand">
-            <a href="/">Yabai<span>BaliTrip</span></a>
+            <a href="/" style="display: flex; align-items: center; gap: 10px;">
+                <img src="{{ asset('images/logo.png') }}" alt="Yabai Bali Logo" style="height: 65px; width: auto; object-fit: contain;">
+                <span class="brand-text">Yabai<span>BaliTrip</span></span>
+            </a>
         </div>
         
         <ul class="nav-links">
