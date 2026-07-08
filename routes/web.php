@@ -6,14 +6,8 @@ use App\Http\Controllers\AdminTourController;
 use App\Http\Controllers\AdminCarPartnerController;
 use App\Http\Controllers\AdminAirportTransferController;
 
-Route::get('/', function (\Illuminate\Http\Request $request) {
-    $query = \App\Models\Tour::query();
-
-    if ($request->has('category') && $request->category !== 'all') {
-        $query->where('category', $request->category);
-    }
-
-    $tours = $query->paginate(8)->appends($request->query());
+Route::get('/', function () {
+    $tours = \App\Models\Tour::take(4)->get();
     return view('welcome', compact('tours'));
 });
 
@@ -23,21 +17,12 @@ Route::get('/about', function () {
 
 Route::get('/tours', function (\Illuminate\Http\Request $request) {
     $query = \App\Models\Tour::query();
-    
-    if ($request->filled('search')) {
-        $search = $request->search;
-        $query->where(function($q) use ($search) {
-            $q->where('title', 'like', "%{$search}%")
-              ->orWhere('description', 'like', "%{$search}%")
-              ->orWhere('location', 'like', "%{$search}%");
-        });
-    }
 
     if ($request->has('category') && $request->category !== 'all') {
         $query->where('category', $request->category);
     }
 
-    $tours = $query->paginate(9)->appends($request->query());
+    $tours = $query->paginate(12)->appends($request->query());
     return view('tours', compact('tours'));
 });
 
