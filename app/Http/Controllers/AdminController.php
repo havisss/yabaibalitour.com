@@ -12,7 +12,7 @@ class AdminController extends Controller
 {
     public function login()
     {
-        if (Auth::check() && Auth::user()->is_admin) {
+        if (Auth::check()) {
             return redirect()->route('admin.dashboard');
         }
         return view('admin.login');
@@ -26,15 +26,8 @@ class AdminController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            if (Auth::user()->is_admin) {
-                $request->session()->regenerate();
-                return redirect()->intended(route('admin.dashboard'));
-            }
-
-            Auth::logout();
-            return back()->withErrors([
-                'email' => 'You do not have administrative access.',
-            ])->onlyInput('email');
+            $request->session()->regenerate();
+            return redirect()->intended(route('admin.dashboard'));
         }
 
         return back()->withErrors([

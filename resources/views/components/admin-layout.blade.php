@@ -59,11 +59,21 @@
         <!-- Main -->
         <div class="admin-main">
             <header class="admin-header">
-                <div class="header-title">
-                    {{ $title ?? 'Dashboard' }}
+                <div class="header-left">
+                    <div class="breadcrumb">
+                        <span>Admin</span>
+                        <svg viewBox="0 0 24 24" class="breadcrumb-separator"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                        <span class="active">{{ $title ?? 'Dashboard' }}</span>
+                    </div>
                 </div>
                 <div class="admin-user">
-                    <span>Welcome, {{ Auth::user()->name }}</span>
+                    <div class="user-info">
+                        <span class="user-name">{{ Auth::user()->name }}</span>
+                        <span class="user-role">Administrator</span>
+                    </div>
+                    <div class="user-avatar">
+                        {{ strtoupper(substr(Auth::user()->name, 0, 1)) }}
+                    </div>
                 </div>
             </header>
 
