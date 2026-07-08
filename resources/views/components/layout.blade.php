@@ -43,7 +43,7 @@
             </div>
 
             <a href="https://wa.me/6281234567890?text={{ urlencode('Hello! I want to book a Bali tour.') }}" class="btn-book-nav" target="_blank" rel="noopener noreferrer">
-                Book Now
+                {{ __('Book Now') }}
             </a>
             
             <button class="mobile-menu-btn" aria-label="Open menu">

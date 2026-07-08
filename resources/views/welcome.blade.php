@@ -41,7 +41,7 @@
 
             <!-- Right: Image + Floating Cards -->
             <div class="hero-graphic" data-animate="fade-left" data-animate-delay="200">
-                <img src="https://bosmudabalitour.com/wp-content/uploads/2025/07/fadhila-nurhakim-yJKdsKvDliQ-unsplash.jpg" alt="Beautiful Bali Tour" class="hero-image" style="object-fit: cover; border-radius: 24px;">
+                <img src="{{ asset('images/bali_welcome_hero.png') }}" alt="Beautiful Bali Tour" class="hero-image" style="object-fit: cover; border-radius: 24px;">
                 
                 <!-- Floating Cards -->
                 <div class="floating-card card-rating">
@@ -75,7 +75,7 @@
     <section class="section">
         <div class="container about-container">
             <div class="about-graphic" data-animate="fade-right">
-                <img src="https://bosmudabalitour.com/wp-content/uploads/2025/08/Bali-Traditional-Cooking-Experience-2-1024x576.jpg" alt="Authentic Bali Experience" class="about-image">
+                <img src="{{ asset('images/bali_welcome_about.png') }}" alt="Authentic Bali Experience" class="about-image">
                 <div class="about-badge">
                     <div class="about-badge-number">10+</div>
                     <div class="about-badge-text">Years of<br>Experience</div>
@@ -258,7 +258,7 @@
                                 <div class="car-content">
                                     <h3 class="car-title" style="font-size: 1.3rem;">{{ $car['name'] }}</h3>
                                     <div class="car-specs">
-                                        <span>{{ $car['seats'] }}</span>
+                                        <span>{{ __($car['seats']) }}</span>
                                         <span>AC</span>
                                     </div>
                                     <div class="car-price">
@@ -333,16 +333,24 @@
          ═══════════════════════════════════════════════════ -->
     <section class="section">
         <div class="container">
-            <div class="airport-banner" data-animate="fade-up">
-                <div class="airport-banner-content">
-
-                    <h2 style="color: #fff; margin-bottom: 16px;">{{ __('Hassle-Free Airport Transfers') }}</h2>
-                    <p style="color: rgba(255,255,255,0.9); margin-bottom: 24px; max-width: 500px;">
-                        {{ __('Start and end your Bali trip smoothly with our reliable airport pickup and drop-off services.') }}
-                    </p>
-                    <a href="https://wa.me/6281234567890" class="btn" style="background: #fff; color: var(--color-primary);">{{ __('Book Transfer') }}</a>
+            <div style="position: relative; border-radius: 30px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.15);" data-animate="fade-up">
+                <img src="{{ asset('images/airport_transfer.png') }}" alt="Bali Airport Transfer" style="width: 100%; height: 400px; object-fit: cover;">
+                <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 40%, rgba(15, 23, 42, 0.2) 100%); display: flex; align-items: center; padding: 80px; padding-right: 20px;">
+                    <div style="max-width: 550px;">
+                        <span style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: rgba(20, 184, 166, 0.15); border: 1px solid rgba(20, 184, 166, 0.3); color: #14b8a6; border-radius: 100px; font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            {{ __('24/7 Premium Service') }}
+                        </span>
+                        <h2 style="color: #fff; font-size: 2.8rem; font-weight: 800; margin-bottom: 20px; line-height: 1.2;">{{ __('Hassle-Free Airport Transfers') }}</h2>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7; margin-bottom: 35px;">
+                            {{ __('Start and end your Bali trip smoothly with our reliable airport pickup and drop-off services. Enjoy a comfortable ride right from the terminal to your hotel.') }}
+                        </p>
+                        <a href="/airport-transfer" class="btn" style="background: var(--color-primary); color: #fff; font-size: 1.1rem; font-weight: 600; padding: 15px 35px; border-radius: 100px; display: inline-flex; align-items: center; gap: 12px; border: none; box-shadow: 0 15px 30px rgba(20, 184, 166, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 20px 40px rgba(20, 184, 166, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 30px rgba(20, 184, 166, 0.3)';">
+                            {{ __('View Details & Book') }}
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
                 </div>
-                <img src="{{ asset('images/airport_transfer.png') }}" alt="Bali Airport Transfer" class="airport-image">
             </div>
         </div>
     </section>
@@ -352,17 +360,25 @@
          ═══════════════════════════════════════════════════ -->
     <section class="section section-bg">
         <div class="container">
-            <div class="section-header" data-animate="fade-up">
-
-                <h2 class="section-title">{{ __('Happy Travelers') }}</h2>
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;" data-animate="fade-up">
+                <span style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 10px;">{{ __('Special Moments Collection with Us') }}</span>
+                <h2 class="section-title" style="margin-bottom: 15px;">{{ __('Happy Travelers') }}</h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">{{ __('See the smiles and unforgettable moments captured by our guests. Don\'t just take our word for it—let their pictures speak for the joy!') }}</p>
             </div>
             
             <div class="gallery-grid">
-                <img src="https://bosmudabalitour.com/wp-content/uploads/2025/08/Lempuyang-Temple-Gate-of-Heaven-e1754399242204.jpg" alt="Gallery 1" class="gallery-img" data-animate="zoom-in" data-animate-delay="0">
-                <img src="https://bosmudabalitour.com/wp-content/uploads/2025/08/Monkey-Forest-1.jpg" alt="Gallery 2" class="gallery-img" data-animate="zoom-in" data-animate-delay="100">
-                <img src="https://bosmudabalitour.com/wp-content/uploads/2025/08/Tanah-Lot-1024x573.jpeg" alt="Gallery 3" class="gallery-img" data-animate="zoom-in" data-animate-delay="200">
-                <img src="https://bosmudabalitour.com/wp-content/uploads/2025/07/Kelingking-Beach-Nusa-Penida.jpg" alt="Gallery 4" class="gallery-img" data-animate="zoom-in" data-animate-delay="300">
-                <img src="https://bosmudabalitour.com/wp-content/uploads/2025/08/Uluwatu-Temple-1024x683.jpg" alt="Gallery 5" class="gallery-img" data-animate="zoom-in" data-animate-delay="400">
+                <img src="{{ asset('images/bali_friends_rice_terrace_1783531274043.png') }}" alt="Happy Travelers 1" class="gallery-img" data-animate="zoom-in" data-animate-delay="0">
+                <img src="{{ asset('images/bali_couple_beach_1783531285434.png') }}" alt="Happy Travelers 2" class="gallery-img" data-animate="zoom-in" data-animate-delay="100">
+                <img src="{{ asset('images/bali_tourist_waterfall_1783531300884.png') }}" alt="Happy Travelers 3" class="gallery-img" data-animate="zoom-in" data-animate-delay="200">
+                <img src="{{ asset('images/bali_temple_tourists_1783531314760.png') }}" alt="Happy Travelers 4" class="gallery-img" data-animate="zoom-in" data-animate-delay="300">
+                <img src="{{ asset('images/bali_cliff_view_1783531367828.png') }}" alt="Happy Travelers 5" class="gallery-img" data-animate="zoom-in" data-animate-delay="400">
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;" data-animate="fade-up">
+                <a href="/gallery" class="btn btn-outline" style="border-width: 2px; font-weight: 600; padding: 12px 30px; display: inline-flex; align-items: center; gap: 10px;">
+                    {{ __('View Full Gallery') }}
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
             </div>
         </div>
     </section>

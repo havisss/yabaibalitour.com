@@ -1,8 +1,8 @@
 {
     "Home": "Beranda",
     "Tours": "Paket Tur",
-    "Private Car": "Sewa Mobil Pribadi",
-    "Airport Transfer": "Antar Jemput Bandara",
+    "Private Car": "Sewa Mobil",
+    "Airport Transfer": "Transfer Bandara",
     "Gallery": "Galeri",
     "About": "Tentang Kami",
     "Contact": "Kontak",
@@ -46,5 +46,12 @@
     "No tours found in this category.": "Tidak ada tur yang ditemukan dalam kategori ini.",
     "Explore the breathtaking landscapes and rich culture of Bali through our carefully curated tour packages. From sacred temples and majestic waterfalls to thrilling activities and pristine beaches, we have the perfect itinerary for your dream vacation.": "Jelajahi pemandangan menakjubkan dan kekayaan budaya Bali melalui paket tur pilihan kami. Dari pura suci dan air terjun megah hingga aktivitas mendebarkan dan pantai alami, kami memiliki rencana perjalanan yang sempurna untuk liburan impian Anda.",
     "Scroll Down": "Gulir ke Bawah",
-    "View All Tours": "Lihat Semua Tur"
+    "View All Tours": "Lihat Semua Tur",
+    "24\/7 Premium Service": "Layanan Premium 24\/7",
+    "Special Moments Collection with Us": "Koleksi Momen Spesial Bersama Kami",
+    "See the smiles and unforgettable moments captured by our guests. Don't just take our word for it—let their pictures speak for the joy!": "Lihat senyuman dan momen tak terlupakan yang diabadikan oleh tamu kami. Jangan hanya percaya kata-kata kami—biarkan foto mereka yang berbicara!",
+    "View Full Gallery": "Lihat Galeri Lengkap",
+    "View Details & Book": "Lihat Detail & Pesan",
+    "Start and end your Bali trip smoothly with our reliable airport pickup and drop-off services. Enjoy a comfortable ride right from the terminal to your hotel.": "Mulai dan akhiri perjalanan Bali Anda dengan lancar bersama layanan antar jemput bandara kami yang andal. Nikmati perjalanan yang nyaman dari terminal langsung ke hotel Anda.",
+    "Charter": "Pribadi"
 }

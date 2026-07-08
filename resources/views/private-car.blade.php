@@ -15,22 +15,22 @@
 
         <!-- Floating Decorations (Left) -->
         <div class="hidden lg:block absolute" style="left: calc(50% - 650px); top: 50%; margin-top: -140px; animation: float 6s ease-in-out infinite; z-index: 5;">
-            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=400&q=80" alt="Car Steering" style="width: 220px; height: 280px; object-fit: cover; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 6px solid #fff; transform: rotate(-8deg);">
+            <img src="{{ asset('images/car_steering.png') }}" alt="Car Steering" style="width: 220px; height: 280px; object-fit: cover; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 6px solid #fff; transform: rotate(-8deg);">
         </div>
         <div class="hidden lg:block absolute" style="left: calc(50% - 480px); bottom: 15%; animation: float 8s ease-in-out infinite; animation-delay: 2s; z-index: 4;">
-            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=300&q=80" alt="Bali Driving" style="width: 160px; height: 160px; object-fit: cover; border-radius: 50%; box-shadow: 0 15px 30px rgba(0,0,0,0.1); border: 5px solid #fff; transform: rotate(12deg);">
+            <img src="{{ asset('images/bali_private_tour_1783531356853.png') }}" alt="Bali Driving" style="width: 160px; height: 160px; object-fit: cover; border-radius: 50%; box-shadow: 0 15px 30px rgba(0,0,0,0.1); border: 5px solid #fff; transform: rotate(12deg);">
         </div>
 
         <!-- Floating Decorations (Right) -->
         <div class="hidden lg:block absolute" style="right: calc(50% - 680px); top: 50%; margin-top: -160px; animation: float 7s ease-in-out infinite; animation-delay: 1s; z-index: 5;">
-            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=400&q=80" alt="Bali Road" style="width: 250px; height: 320px; object-fit: cover; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 6px solid #fff; transform: rotate(6deg);">
+            <img src="{{ asset('images/bali_monkey_forest_1783531347703.png') }}" alt="Bali Road" style="width: 250px; height: 320px; object-fit: cover; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 6px solid #fff; transform: rotate(6deg);">
         </div>
         <div class="hidden lg:block absolute" style="right: calc(50% - 450px); top: 15%; animation: float 9s ease-in-out infinite; animation-delay: 3s; z-index: 4;">
-            <img src="https://images.unsplash.com/photo-1533558701576-23c65e0272fb?auto=format&fit=crop&w=300&q=80" alt="Car Travel" style="width: 140px; height: 140px; object-fit: cover; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); border: 5px solid #fff; transform: rotate(-15deg);">
+            <img src="{{ asset('images/airport_transfer.png') }}" alt="Car Travel" style="width: 140px; height: 140px; object-fit: cover; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); border: 5px solid #fff; transform: rotate(-15deg);">
         </div>
 
         <div class="container" style="margin-top: -80px; position: relative; z-index: 10;">
-            <h1 class="section-title" data-animate="fade-up" style="font-size: clamp(3rem, 5vw, 4.5rem); margin-bottom: 1.5rem; font-weight: 800; letter-spacing: -1px;">
+            <h1 class="section-title" data-animate="fade-up" style="max-width: 650px; margin: 0 auto 1.5rem; font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1;">
                 <span style="background: linear-gradient(135deg, var(--color-primary), #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">{{ __('Private Car') }}</span>
                 <span style="color: var(--color-dark);">{{ __('Charter') }}</span>
             </h1>

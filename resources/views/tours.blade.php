@@ -12,18 +12,18 @@
 
         <!-- Floating Decorations (Left) -->
         <div class="hidden lg:block absolute" style="left: calc(50% - 650px); top: 50%; margin-top: -140px; animation: float 6s ease-in-out infinite; z-index: 5;">
-            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&q=80" alt="Bali Temple" style="width: 220px; height: 280px; object-fit: cover; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 4px solid rgba(255,255,255,0.05); transform: rotate(-8deg);">
+            <img src="{{ asset('images/tour_temple.png') }}" alt="Bali Temple" style="width: 220px; height: 280px; object-fit: cover; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 4px solid rgba(255,255,255,0.05); transform: rotate(-8deg);">
         </div>
         <div class="hidden lg:block absolute" style="left: calc(50% - 480px); bottom: 15%; animation: float 8s ease-in-out infinite; animation-delay: 2s; z-index: 4;">
-            <img src="https://images.unsplash.com/photo-1559628233-eb1b1a45564b?auto=format&fit=crop&w=300&q=80" alt="Bali Beach" style="width: 160px; height: 160px; object-fit: cover; border-radius: 50%; box-shadow: 0 15px 30px rgba(0,0,0,0.3); border: 3px solid rgba(255,255,255,0.05); transform: rotate(12deg);">
+            <img src="{{ asset('images/tour_beach.png') }}" alt="Bali Beach" style="width: 160px; height: 160px; object-fit: cover; border-radius: 50%; box-shadow: 0 15px 30px rgba(0,0,0,0.3); border: 3px solid rgba(255,255,255,0.05); transform: rotate(12deg);">
         </div>
 
         <!-- Floating Decorations (Right) -->
         <div class="hidden lg:block absolute" style="right: calc(50% - 680px); top: 50%; margin-top: -160px; animation: float 7s ease-in-out infinite; animation-delay: 1s; z-index: 5;">
-            <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=400&q=80" alt="Bali Rice Terrace" style="width: 250px; height: 320px; object-fit: cover; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 4px solid rgba(255,255,255,0.05); transform: rotate(6deg);">
+            <img src="{{ asset('images/tour_terrace.png') }}" alt="Bali Rice Terrace" style="width: 250px; height: 320px; object-fit: cover; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 4px solid rgba(255,255,255,0.05); transform: rotate(6deg);">
         </div>
         <div class="hidden lg:block absolute" style="right: calc(50% - 450px); top: 15%; animation: float 9s ease-in-out infinite; animation-delay: 3s; z-index: 4;">
-            <img src="https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=300&q=80" alt="Bali Culture" style="width: 140px; height: 140px; object-fit: cover; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.3); border: 3px solid rgba(255,255,255,0.05); transform: rotate(-15deg);">
+            <img src="{{ asset('images/tour_culture.png') }}" alt="Bali Culture" style="width: 140px; height: 140px; object-fit: cover; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.3); border: 3px solid rgba(255,255,255,0.05); transform: rotate(-15deg);">
         </div>
 
         <div class="container" style="margin-top: -80px; position: relative; z-index: 10;">
